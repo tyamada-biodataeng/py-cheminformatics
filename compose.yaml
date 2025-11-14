@@ -18,7 +18,7 @@ services:
         ENV_YML: "environment.yaml"
         VENV: "cheminfo"
         REQ_TXT: "requirements.txt"
-    image: biobr131/py-cheminformatics:latest
+    image: tyamadabiodataeng/py-cheminformatics
     container_name: jupyter
     command: mamba run --name cheminfo jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
     ports:
