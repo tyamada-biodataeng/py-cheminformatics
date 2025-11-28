@@ -15,6 +15,10 @@ scipy
 matplotlib
 plotly
 openpyxl
+python-dotenv
+psycopg[binary]
+sqlalchemy
+sqlacodegen
 pandas[performance, plot, computation, excel]
 polars-lts-cpu
 ibis-framework[pandas, polars]
@@ -27,9 +31,5 @@ rdkit
 jupyterlab
 ipywidgets
 ipympl
-python-dotenv
-psycopg[binary]
-sqlalchemy
-sqlacodegen
 torch --index-url https://download.pytorch.org/whl/cpu
 deepchem
