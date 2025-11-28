@@ -19,12 +19,12 @@ COPY ${ENV_YML} ${DIR_WORK}/
 ARG VENV
 RUN mamba update -y -c conda-forge mamba && \
     mamba env create --file ${ENV_YML} && \
-    mamba clean -i -t -y && \
     mamba run --name ${VENV} pip install --upgrade pip
 
 ARG REQ_TXT
 COPY ${REQ_TXT} ${DIR_WORK}/
-RUN mamba run --name ${VENV} pip install --no-cache-dir -r ${REQ_TXT}
+RUN mamba run --name ${VENV} pip install --no-cache-dir -r ${REQ_TXT} && \
+    mamba clean -i -t -y
 
 USER ubuntu
 
