@@ -19,7 +19,8 @@ COPY ${ENV_YML} ${DIR_WORK}/
 ARG VENV
 RUN mamba update -y -c conda-forge mamba && \
     mamba env create --file ${ENV_YML} && \
-    mamba run --name ${VENV} pip install --upgrade pip
+    mamba run --name ${VENV} pip install --upgrade pip && \
+    mamba clean -i -t -y
 
 ARG REQ_TXT
 COPY ${REQ_TXT} ${DIR_WORK}/
