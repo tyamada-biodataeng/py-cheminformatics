@@ -33,3 +33,4 @@ ipywidgets
 ipympl
 torch --index-url https://download.pytorch.org/whl/cpu
 deepchem
+chemprop
